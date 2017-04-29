@@ -1,0 +1,15 @@
+{
+  "name": "rockstar-wedding",
+  "version": "1.0.0",
+  "description": "The website for Rockstar.Wedding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mustache -p partials/navigation.mustache -p partials/footer.mustache data.json home.html > public/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  }
+}

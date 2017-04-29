@@ -6,6 +6,18 @@ Add your custom styles below
   max-width: 160px;
 }
 
+/* Layout */
+
+.cols > div {
+  width: 50%;
+  padding: 0 10px;
+}
+
+@media all and (max-width: 768px) {
+  .cols > div {
+    width: 100%;
+  }
+}
 
 /* Homepage */
 
@@ -22,4 +34,9 @@ Add your custom styles below
 
 .sublead {
   font-size: 20px;
+}
+
+.fake-tabs > li {
+  opacity: 1;
+  pointer-events: none;
 }
