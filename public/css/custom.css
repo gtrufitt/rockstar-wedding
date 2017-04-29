@@ -19,22 +19,59 @@ Add your custom styles below
   }
 }
 
-/* Homepage */
-
-.lead {
-  text-transform: uppercase;
+section, footer {
+    padding-top: 1.5em;
+    padding-bottom: 4em;
 }
 
-.lead,
-.sublead {
+.dashed-divider {
+  border-top: 1px dashed #ccc;
+}
+
+/* Home */
+
+
+.home-lead  .lead {
+    text-transform: uppercase;
+  }
+
+.home-lead .lead,
+.home-lead.sublead {
   margin-bottom: 0;
   margin-top: 10px;
   color: #000;
 }
 
-.sublead {
+.home-lead .sublead {
   font-size: 20px;
 }
+
+.home-lead .logo {
+  width: 376px;
+}
+
+/* Header */
+
+.header-lead .lead {
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #000;
+}
+
+@media all and (max-width: 768px) {
+  .header-lead .lead {
+    font-size: 40px;
+  }
+}
+
+.header-lead .logo {
+  width: 185px;
+}
+
+/* Fake Tabs */
+
 
 .fake-tabs > li {
   opacity: 1;

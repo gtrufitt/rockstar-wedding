@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mustache -p partials/navigation.mustache -p partials/footer.mustache data.json home.html > public/index.html"
+    "build": "mustache-prestatic ./*.html --data ./data.json --partials ./partials/* --output public"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mustache": "^2.3.0"
+    "mustache": "^2.3.0",
+    "mustache-prestatic": "^2.0.0"
   }
 }
