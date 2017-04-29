@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mustache-prestatic ./*.html --data ./data.json --partials ./partials/* --output public"
+    "build": "mustache-prestatic ./*.html --data ./*.json --partials ./partials/* --output public"
   },
   "author": "",
   "license": "ISC",
