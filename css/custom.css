@@ -1,0 +1,25 @@
+/***************************
+Add your custom styles below
+****************************/
+
+.nav-bar .logo {
+  max-width: 160px;
+}
+
+
+/* Homepage */
+
+.lead {
+  text-transform: uppercase;
+}
+
+.lead,
+.sublead {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #000;
+}
+
+.sublead {
+  font-size: 20px;
+}

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'HankenBook';
+        src: url('/fonts/hanken-book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'HankenLight';
+        src: url('/fonts/hanken-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6, .lead{ font-family: 'HankenBook', 'Montserrat', 'Helvetica Neue', 'Helvetica', Arial, sans-serif; }
+
+p,span:not(.btn__text),ul,blockquote,figcaption,input[type],textarea{ font-family: 'HankenLight','Helvetica Neue', 'Helvetica', Arial, sans-serif; }
+
+h6,.h6{ font-weight: 600; }
