@@ -77,3 +77,26 @@ section, footer {
   opacity: 1;
   pointer-events: none;
 }
+
+/* footer */
+
+.rw-footer {
+  background-color: #efefef;
+  border-top: 1px solid #e6e6e6;
+}
+
+/* button */
+
+.btn--primary, .btn--primary:visited {
+    background: rgb(0,28,38);
+    border-color: #000;
+}
+
+.btn.btn--primary {
+  border-color: #000;
+}
+
+.btn.btn--primary:hover {
+  background-color: #000;
+  border-color: #000 !important;
+}
