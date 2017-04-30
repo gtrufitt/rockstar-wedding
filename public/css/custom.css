@@ -50,6 +50,12 @@ section, footer {
   width: 376px;
 }
 
+/* How it works */
+
+.card-8 .card__title h3 {
+  max-width: 100%;
+}
+
 /* Header */
 
 .header-lead .lead {

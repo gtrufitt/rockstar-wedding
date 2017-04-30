@@ -6223,10 +6223,20 @@ a:active .card {
   right: 0;
   top: 0;
 }
+
+.card-8.flipped .card__body {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 .card-8 .card__image {
   padding: 0;
   overflow: hidden;
   background: #eee;
+}
+.card-8.flipped .card__image {
+  float: right;
 }
 .card-8 .card__image img {
   transition: 0.2s linear;
@@ -6257,7 +6267,8 @@ a:active .card {
   margin-right: 1.1304347826087em;
 }
 @media all and (max-width: 1200px) {
-  .card-8 .card__body {
+  .card-8 .card__body,
+  .card-8.flipped .card__body {
     position: relative;
     height: auto;
   }
