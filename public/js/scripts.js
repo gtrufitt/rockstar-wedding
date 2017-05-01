@@ -1077,7 +1077,6 @@ mr = (function(mr, $, window, document) {
                         '</li>'
                 );
             }
-
             //End of "if filterable masonry item exists"
         });
     };
@@ -1922,7 +1921,8 @@ mr = (function(mr, $, window, document) {
     'use strict';
     var documentReady = function($) {
         var $body = $('body');
-        if ($('body[data-reveal-selectors]').length) {
+        // if ($('body[data-reveal-selectors]').length) {
+        if (false) {
             window.sr = ScrollReveal();
             var selectors = $body.attr('data-reveal-selectors');
 
