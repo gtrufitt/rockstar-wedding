@@ -47,7 +47,7 @@ section, footer {
 }
 
 .home-lead .logo {
-  width: 376px;
+  max-width: 376px;
 }
 
 /* How it works */
@@ -73,7 +73,7 @@ section, footer {
 }
 
 .header-lead .logo {
-  width: 185px;
+  max-width: 185px;
 }
 
 /* Fake Tabs */
@@ -105,4 +105,12 @@ section, footer {
 .btn.btn--primary:hover {
   background-color: #000;
   border-color: #000 !important;
+}
+
+/* Testimonial */
+
+@media (max-width: 767px) {
+  .testimonial-3 .testimonial__text {
+      margin-top: 1em;
+  }
 }
