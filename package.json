@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "mustache": "^2.3.0",
-    "mustache-prestatic": "^2.0.0"
+    "mustache-prestatic": "^2.0.0",
+    "serve": "^5.1.4"
   }
 }
