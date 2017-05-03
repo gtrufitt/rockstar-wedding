@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve public/",
     "build": "mustache-prestatic ./*.html --data ./*.json --partials ./partials/* --output public"
   },
   "author": "",
