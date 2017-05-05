@@ -1,6 +1,23 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var data = require('./data/page.json');
+const contentful = require('contentful');
+
+const SPACE_ID = '';
+const ACCESS_TOKEN = '';
+
+const client = contentful.createClient({
+    // This is the space ID. A space is like a project folder in Contentful terms
+    space: SPACE_ID,
+    // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+    accessToken: ACCESS_TOKEN
+});
+
+function getPage(entries, pageKey) {
+    return entries.items.filter(function(entry) {
+        return entry.fields.pageKey === pageKey;
+    });
+}
 
 var app = express();
 
@@ -30,9 +47,15 @@ data.pages.map(function(page) {
     });
 
     app.get('/' + page.pathName, function(req, res) {
-        res.render(page.pathName, {
-            title: page.title,
-            description: page.description
+        client.getEntries().then(entries => {
+            // Get the page from the response
+            const pageFields = getPage(entries, page.pathName)[0].fields;
+
+            // Render the page using the fields from the API response
+            res.render(page.pathName, {
+                title: pageFields.title,
+                description: pageFields.description
+            });
         });
     });
 });
