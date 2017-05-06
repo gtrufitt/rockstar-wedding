@@ -492,7 +492,13 @@ mr = (function(mr, $, window, document) {
                         contentType: 'application/json; charset=utf-8',
                         success: function(data) {
                             // Request was a success, what was the response?
-
+                            window.ga(
+                                'send',
+                                'event',
+                                'Forms',
+                                'submit',
+                                'All'
+                            );
                             if (
                                 data.result !== 'success' && data.Status !== 200
                             ) {
