@@ -13,11 +13,8 @@ const client = contentful.createClient({
     accessToken: ACCESS_TOKEN
 });
 
-function getPage(entries, pageKey) {
-    return entries.items.filter(function(entry) {
-        return entry.fields.pageKey === pageKey;
-    });
-}
+const getPage = (entries, pageKey) =>
+    entries.items.filter(entry => entry.fields.pageKey === pageKey);
 
 var app = express();
 
@@ -40,21 +37,25 @@ app.get('/', function(req, res) {
     });
 });
 
-data.pages.map(function(page) {
+// Map the default pages
+data.pages.map(page => {
     // Redirect all .html extentions
-    app.get('/' + page.pathName + '.html', function(req, res) {
-        res.redirect(301, '/' + page.pathName);
+    app.get('/' + page + '.html', (req, res) => {
+        res.redirect(301, '/' + page);
     });
 
-    app.get('/' + page.pathName, function(req, res) {
+    app.get('/' + page, (req, res) => {
         client.getEntries().then(entries => {
             // Get the page from the response
-            const pageFields = getPage(entries, page.pathName)[0].fields;
+            const fetchedPaged = getPage(entries, page);
+            const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
 
             // Render the page using the fields from the API response
-            res.render(page.pathName, {
-                title: pageFields.title,
-                description: pageFields.description
+            res.render(page, {
+                title: pageFields.title || 'Rockstar Wedding',
+                description: (
+                    pageFields.description || 'Wedding videos with personality'
+                )
             });
         });
     });

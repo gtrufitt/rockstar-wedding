@@ -1,34 +1,11 @@
 {
   "pages": [
-    {
-        "pathName": "how-it-works",
-        "title": "How does Rockstar Wedding work",
-        "description": "When you film and we edit, you'll get a wedding video packed with personality"
-    },
-    {
-        "pathName": "gallery",
-        "title": "Rockstar Wedding gallery",
-        "description": "Take a look at some of our amazing wedding videos"
-    },
-    {
-        "pathName": "packages-and-pricing",
-        "title": "When you film and we edit, you'll get a wedding video packed with personality",
-        "description": "We have three great packages for you to choose from"
-    },
-    {
-        "pathName": "reviews",
-        "title": "What people say about Rockstar Wedding",
-        "description": "Have a read about what our lovely clients have said about us"
-    },
-    {
-        "pathName": "contact-us",
-        "title": "Contact Rockstar Wedding",
-        "description": "Say hello to us here at Rockstar Wedding"
-    },
-    {
-        "pathName": "rocknroll",
-        "title": "Rockstar Wedding. You Film. We Edit. Wedding videos with personality.",
-        "description": "We make fun, alternative wedding videos that are packed with laughs, personality and ace music that reflects you as a couple and your wedding day!"
-    }
+    "how-it-works",
+    "gallery",
+    "packages-and-pricing",
+    "reviews",
+    "contact-us",
+    "rocknroll",
+    "blog"
   ]
 }
