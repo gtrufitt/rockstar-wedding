@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": " source ./config && nodemon server.js",
     "serve": "node server.js",
     "build": "mustache-prestatic ./*.html --data ./*.json --partials ./partials/* --output public"
   },
