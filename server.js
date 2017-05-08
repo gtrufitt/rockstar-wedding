@@ -37,6 +37,19 @@ app.get('/', function(req, res) {
     });
 });
 
+app.get('/blog', (req, res) => {
+    client
+        .getEntries({
+            content_type: 'blogPost'
+        })
+        .then(blogPosts => {
+            console.log(blogPosts.items);
+            res.render('blog', {
+                posts: blogPosts.items
+            });
+        });
+});
+
 // Map the default pages
 data.pages.map(page => {
     // Redirect all .html extentions
