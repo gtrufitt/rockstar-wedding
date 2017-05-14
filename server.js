@@ -1,10 +1,23 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
-var data = require('./data/page.json');
 const contentful = require('contentful');
+const marked = require('marked');
+
+var data = require('./data/page.json');
 
 const SPACE_ID = process.env.SPACE_ID;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+
+marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false
+});
 
 const client = contentful.createClient({
     // This is the space ID. A space is like a project folder in Contentful terms
@@ -43,10 +56,33 @@ app.get('/blog', (req, res) => {
             content_type: 'blogPost'
         })
         .then(blogPosts => {
-            console.log(blogPosts.items);
             res.render('blog', {
                 posts: blogPosts.items
             });
+        });
+});
+
+app.get('/blog/:slug', (req, res) => {
+    const blogPath = req.params.slug;
+    client
+        .getEntries({
+            content_type: 'blogPost',
+            'fields.url': blogPath
+        })
+        .then(blogPosts => {
+            if (
+                blogPosts.items &&
+                blogPosts.items[0] &&
+                blogPosts.items[0].fields
+            ) {
+                res.render('blog-item', {
+                    post: blogPosts.items[0].fields,
+                    postBody: marked(blogPosts.items[0].fields.body)
+                });
+            } else {
+                res.status(404);
+                res.render('404');
+            }
         });
 });
 

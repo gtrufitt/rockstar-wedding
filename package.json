@@ -15,6 +15,7 @@
     "contentful": "^4.3.0",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
+    "marked": "^0.3.6",
     "mustache": "^2.3.0",
     "mustache-prestatic": "^2.0.0",
     "nodemon": "^1.11.0",
