@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " source ./config && nodemon server.js",
-    "serve": "node server.js",
+    "start-dev": " source ./config && nodemon server.js",
+    "start": "node server.js",
     "build": "mustache-prestatic ./*.html --data ./*.json --partials ./partials/* --output public"
   },
   "author": "",
