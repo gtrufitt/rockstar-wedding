@@ -76,6 +76,13 @@ app.get('/blog/:slug', (req, res) => {
                 blogPosts.items[0].fields
             ) {
                 res.render('blog-item', {
+                    title: (
+                        `${blogPosts.items[0].fields.title} | Rockstar Wedding`
+                    ),
+                    description: blogPosts.items[0].fields.listingSubtitle,
+                    ogImage: blogPosts.items[
+                        0
+                    ].fields.mainImage.fields.file.url,
                     post: blogPosts.items[0].fields,
                     postBody: marked(blogPosts.items[0].fields.body)
                 });
@@ -102,6 +109,7 @@ data.pages.map(page => {
             // Render the page using the fields from the API response
             res.render(page, {
                 title: pageFields.title || 'Rockstar Wedding',
+                ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
                 description: (
                     pageFields.description || 'Wedding videos with personality'
                 )
