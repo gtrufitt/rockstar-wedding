@@ -19,16 +19,19 @@
       </div>
       <div class="container">
           <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                  <div class="video-cover blog-post__hero box-shadow">
-                      <img alt="{{post.title}}" src="{{post.mainImage.fields.file.url}}">
-                  </div>
-              </div>
+              {{#if post.mainImage}}
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="video-cover blog-post__hero box-shadow">
+                        <img alt="{{post.title}}" src="{{post.mainImage.fields.file.url}}">
+                    </div>
+                </div>
+              {{/if}}
               <div class="col-sm-10 col-sm-offset-1">
                   <h2>{{post.listingSubtitle}}</h2>
                   {{{postBody}}}
               </div>
           </div>
+
 
           <div class="row">
               <div class="col-sm-12 text-center">

@@ -80,9 +80,13 @@ app.get('/blog/:slug', (req, res) => {
                         `${blogPosts.items[0].fields.title} | Rockstar Wedding`
                     ),
                     description: blogPosts.items[0].fields.listingSubtitle,
-                    ogImage: blogPosts.items[
-                        0
-                    ].fields.mainImage.fields.file.url,
+                    ogImage: (
+                        blogPosts.items[0].fields.mainImage &&
+                            blogPosts.items[
+                                0
+                            ].fields.mainImage.fields.file.url ||
+                            'https://rockstar.wedding/img/launch-sharer-new.png'
+                    ),
                     post: blogPosts.items[0].fields,
                     postBody: marked(blogPosts.items[0].fields.body)
                 });
