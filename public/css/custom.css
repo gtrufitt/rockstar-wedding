@@ -62,6 +62,11 @@ section, footer {
   font-style: normal;
 }
 
+.main-nav-social-list {
+  line-height: 62px !important;
+  padding-right: 20px;
+}
+
 /* Header */
 
 .header-lead .lead {
@@ -95,6 +100,10 @@ section, footer {
 .rw-footer {
   background-color: #efefef;
   border-top: 1px solid #e6e6e6;
+}
+
+.footer-3 .logo {
+  max-height: 3.4375em;
 }
 
 /* button */
