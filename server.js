@@ -6,9 +6,7 @@ const marked = require('marked');
 var data = require('./data/page.json');
 
 const SPACE_ID = process.env.SPACE_ID;
-const ACCESS_TOKEN = process.env.STAGE === 'dev'
-    ? process.env.PREVIEW_ACCESS_TOKEN
-    : process.env.ACCESS_TOKEN;
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 const CONTENTFUL_HOST = process.env.STAGE === 'dev'
     ? 'preview.contentful.com'
     : 'cdn.contentful.com';
