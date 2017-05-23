@@ -61,7 +61,10 @@ app.get('/blog', (req, res) => {
         })
         .then(blogPosts => {
             res.render('blog', {
-                posts: blogPosts.items
+                posts: blogPosts.items,
+                title: 'The Rockstar Wedding blog',
+                ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
+                description: 'Read blog posts from Rockstar Wedding'
             });
         });
 });
