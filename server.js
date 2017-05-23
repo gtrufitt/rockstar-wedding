@@ -6,7 +6,12 @@ const marked = require('marked');
 var data = require('./data/page.json');
 
 const SPACE_ID = process.env.SPACE_ID;
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+const ACCESS_TOKEN = process.env.STAGE === 'dev'
+    ? process.env.PREVIEW_ACCESS_TOKEN
+    : process.env.ACCESS_TOKEN;
+const CONTENTFUL_HOST = process.env.STAGE === 'dev'
+    ? 'preview.contentful.com'
+    : 'cdn.contentful.com';
 
 marked.setOptions({
     renderer: new marked.Renderer(),
@@ -23,7 +28,8 @@ const client = contentful.createClient({
     // This is the space ID. A space is like a project folder in Contentful terms
     space: SPACE_ID,
     // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-    accessToken: ACCESS_TOKEN
+    accessToken: ACCESS_TOKEN,
+    host: CONTENTFUL_HOST
 });
 
 const getPage = (entries, pageKey) =>
