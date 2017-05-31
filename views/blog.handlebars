@@ -16,7 +16,9 @@
                                         </div>
                                     </div>
                                     <div class="card__body col-sm-5 col-md-4 boxed boxed--lg bg--white">
-                                        <h6>{{this.fields.clientName}} EST {{this.fields.weddingDate}}</h6>
+                                        {{#if this.fields.weddingDate}}
+                                          <h6>{{this.fields.clientName}} EST {{this.fields.weddingDate}}</h6>
+                                        {{/if}}
                                         <div class="card__title">
                                             <h4>{{this.fields.title}}</h4>
                                         </div>
