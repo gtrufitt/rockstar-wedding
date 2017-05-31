@@ -118,13 +118,18 @@ data.pages.map(page => {
             const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
 
             // Render the page using the fields from the API response
-            res.render(page, {
-                title: pageFields.title || 'Rockstar Wedding',
-                ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
-                description: (
-                    pageFields.description || 'Wedding videos with personality'
+            res.render(
+                page,
+                Object.assign(
+                    {},
+                    {
+                        title: 'Rockstar Wedding',
+                        ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
+                        description: 'Wedding videos with personality'
+                    },
+                    pageFields
                 )
-            });
+            );
         });
     });
 });
