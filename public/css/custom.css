@@ -154,3 +154,7 @@ section, footer {
 .giphy-embed {
   margin-bottom: 3.25em;
 }
+
+iframe {
+  background: none;
+}
