@@ -50,7 +50,8 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
     res.render('index', {
         title: 'Rockstar Wedding. You Film. We Edit. Wedding videos with personality.',
-        description: 'We make fun, alternative wedding videos that are packed with laughs, personality and ace music that reflects you as a couple and your wedding day!'
+        description: 'We make fun, alternative wedding videos that are packed with laughs, personality and ace music that reflects you as a couple and your wedding day!',
+        ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png'
     });
 });
 
@@ -63,7 +64,7 @@ app.get('/blog', (req, res) => {
             res.render('blog', {
                 posts: blogPosts.items,
                 title: 'The Rockstar Wedding blog',
-                ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
+                ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
                 description: 'Read blog posts from Rockstar Wedding'
             });
         });
@@ -92,7 +93,7 @@ app.get('/blog/:slug', (req, res) => {
                             blogPosts.items[
                                 0
                             ].fields.mainImage.fields.file.url ||
-                            'https://rockstar.wedding/img/launch-sharer-new.png'
+                            '//rockstar.wedding/img/rockstar-wedding-sharer.png'
                     ),
                     post: blogPosts.items[0].fields,
                     postBody: marked(blogPosts.items[0].fields.body)
