@@ -124,7 +124,7 @@ data.pages.map(page => {
                     {},
                     {
                         title: 'Rockstar Wedding',
-                        ogImage: 'https://rockstar.wedding/img/launch-sharer-new.png',
+                        ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
                         description: 'Wedding videos with personality'
                     },
                     pageFields
