@@ -7,41 +7,34 @@
                 <div class="masonry masonry-blog">
                     <div class="masonry__container masonry--animate masonry--active">
                       {{#each posts}}
-                        <div class="col-sm-12 masonry__item">
-                            <a href="/blog/{{this.fields.url}}">
-                                <div class="card card--horizontal card-6">
-                                    <div class="card__image col-sm-7 col-md-8">
-                                        <div class="background-image-holder">
-                                            <img alt="The wedding of {{this.fields.clientName}}" src="{{this.fields.mainImage.fields.file.url}}">
-                                        </div>
-                                    </div>
-                                    <div class="card__body col-sm-5 col-md-4 boxed boxed--lg bg--white">
-                                        {{#if this.fields.weddingDate}}
-                                          <h6>{{this.fields.clientName}} EST {{this.fields.weddingDate}}</h6>
-                                        {{/if}}
-                                        <div class="card__title">
-                                            <h4>{{this.fields.title}}</h4>
-                                        </div>
-                                        <p>{{this.fields.listingSubtitle}}</p>
-                                        <hr>
-                                        <div class="card__lower">
-                                            <span>by</span>
-                                            <span class="h6">HAYLEY TRUFITT</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
+                        {{#unless this.fields.hideFromListing}}
+                          <div class="col-sm-12 masonry__item">
+                              <a href="/blog/{{this.fields.url}}">
+                                  <div class="card card--horizontal card-6">
+                                      <div class="card__image col-sm-7 col-md-8">
+                                          <div class="background-image-holder">
+                                              <img alt="The wedding of {{this.fields.clientName}}" src="{{this.fields.mainImage.fields.file.url}}">
+                                          </div>
+                                      </div>
+                                      <div class="card__body col-sm-5 col-md-4 boxed boxed--lg bg--white">
+                                          {{#if this.fields.weddingDate}}
+                                            <h6>{{this.fields.clientName}} EST {{this.fields.weddingDate}}</h6>
+                                          {{/if}}
+                                          <div class="card__title">
+                                              <h4>{{this.fields.title}}</h4>
+                                          </div>
+                                          <p>{{this.fields.listingSubtitle}}</p>
+                                          <hr>
+                                          <div class="card__lower">
+                                              <span>by</span>
+                                              <span class="h6">HAYLEY TRUFITT</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </a>
+                          </div>
+                        {{/unless}}
                       {{/each}}
-
-
-
-
-
-
-
                     </div>
 
                 </div>
