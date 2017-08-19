@@ -1025,7 +1025,7 @@ mr = (function(mr, $, window, document) {
                 ).length
             ) {
                 // Create empty ul for filters
-                filters.append('<ul></ul>');
+                // filters.append('<ul></ul>');
                 filtersList = filters.find('> ul');
 
                 // To avoid cases where user leave filter attribute blank
@@ -1073,9 +1073,10 @@ mr = (function(mr, $, window, document) {
                         });
                     });
 
-                mr.util.sortChildrenByText(
-                    $(this).find('.masonry__filters ul')
-                );
+                // mr.util.sortChildrenByText(
+                //     $(this).find('.masonry__filters ul')
+                // );
+
                 // Add a filter "all" option
                 filtersList.prepend(
                     '<li class="active" data-masonry-filter="*">' +
