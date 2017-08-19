@@ -58,7 +58,8 @@ app.get('/', function(req, res) {
 app.get('/blog', (req, res) => {
     client
         .getEntries({
-            content_type: 'blogPost'
+            content_type: 'blogPost',
+            order: '-sys.createdAt'
         })
         .then(blogPosts => {
             res.render('blog', {
