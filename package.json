@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve public/",
+    "start-dev": " source ./config && nodemon server.js",
+    "start": "node server.js",
     "build": "mustache-prestatic ./*.html --data ./*.json --partials ./partials/* --output public"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "contentful": "^4.3.0",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "marked": "^0.3.6",
     "mustache": "^2.3.0",
     "mustache-prestatic": "^2.0.0",
+    "nodemon": "^1.11.0",
     "serve": "^5.1.4"
   }
 }

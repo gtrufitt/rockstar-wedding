@@ -1,0 +1,137 @@
+<div class="main-container">
+  <section class="blog-post">
+      <div class="blog-post__title bg--secondary">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+                      <h1>{{post.title}}</h1>
+                      <div class="blog-post__author">
+                          <span>
+                              <em>by </em>
+                          </span>
+                          <span class="h6">Hayley Trufitt</span>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+      </div>
+      <div class="container">
+          <div class="row">
+              {{#if post.mainImage}}
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="video-cover blog-post__hero box-shadow">
+                        <img alt="{{post.title}}" src="{{post.mainImage.fields.file.url}}">
+                    </div>
+                </div>
+              {{/if}}
+              <div class="col-sm-10 col-sm-offset-1">
+                  <h2>{{post.listingSubtitle}}</h2>
+                  {{{postBody}}}
+              </div>
+          </div>
+
+
+          <div class="row">
+              <div class="col-sm-12 text-center">
+                  <div class="blog-post__share">
+                      <h5>Share this article</h5>
+                      <a class="btn btn--sm bg--facebook" target="_blank" href="https://www.facebook.com/dialog/share?app_id=106487423266333&href=https://rockstar.wedding/blog/{{post.url}}">
+                          <span class="btn__text">
+                              <i class="socicon-facebook"></i> Share on Facebook
+                          </span>
+                      </a>
+                      <a class="btn btn--sm bg--twitter" href="https://twitter.com/intent/tweet?text={{post.title}}&url=https://rockstar.wedding/blog/{{post.url}}">
+                          <span class="btn__text">
+                              <i class="socicon-twitter"></i> Share on Twitter
+                          </span>
+                      </a>
+                      <a class="btn btn--sm bg--pinterest" href="http://www.pinterest.com/pin/find/?url=https://rockstar.wedding/blog/{{post.url}}">
+                          <span class="btn__text">
+                              <i class="socicon-pinterest"></i> Share on Pinterest
+                          </span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- <div class="row">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                  <div class="blog-post__comments">
+                      <hr>
+                      <h6>3 Comments:</h6>
+                      <ul>
+                          <li>
+                              <div class="comment">
+                                  <div class="comment__image">
+                                      <img alt="pic" src="img/avatar-small-4.png">
+                                  </div>
+                                  <div class="comment__text">
+                                      <h5>Abigail Roswell</h5>
+                                      <span>
+                                          <em>March 17th, 2016</em>
+                                      </span>
+                                      <p>
+                                          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                                      </p>
+                                  </div>
+                                  <hr>
+                              </div>
+
+                              <ul>
+                                  <li>
+                                      <div class="comment">
+                                          <div class="comment__image">
+                                              <img alt="pic" src="img/avatar-small-3.png">
+                                          </div>
+                                          <div class="comment__text">
+                                              <h5>Rick Vogel</h5>
+                                              <span>
+                                                  <em>March 17th, 2016</em>
+                                              </span>
+                                              <p>
+                                                  Vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                                              </p>
+                                          </div>
+                                          <hr>
+                                      </div>
+
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                              <div class="comment">
+                                  <div class="comment__image">
+                                      <img alt="pic" src="img/avatar-small-1.png">
+                                  </div>
+                                  <div class="comment__text">
+                                      <h5>Lisa Wright</h5>
+                                      <span>
+                                          <em>March 15th, 2016</em>
+                                      </span>
+                                      <p>
+                                          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+                                      </p>
+                                  </div>
+                                  <hr>
+                              </div>
+
+                          </li>
+                      </ul>
+                      <form class="comment__form form--square">
+                          <h6>Leave a Comment</h6>
+                          <input placeholder="Your Name" type="text" name="name">
+                          <input placeholder="Email Address" type="email" name="email">
+                          <textarea placeholder="Your Comment" name="comment" rows="4"></textarea>
+                          <button type="submit" class="btn btn--primary vpe">Submit Comment</button>
+                      </form>
+                  </div>
+
+              </div>
+          </div> -->
+
+        </div>
+
+    </section>
+</div>
