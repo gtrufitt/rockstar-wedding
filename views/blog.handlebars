@@ -28,6 +28,11 @@
                                           <div class="card__lower">
                                               <span>by</span>
                                               <span class="h6">HAYLEY TRUFITT</span>
+                                              {{#if this.fields.photographerName}}
+                                                <br>
+                                                <span>Photography by</span>
+                                                <span class="h6">{{this.fields.photographerName}}</span>
+                                              {{/if}}
                                           </div>
                                       </div>
                                   </div>
