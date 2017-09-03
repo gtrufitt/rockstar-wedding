@@ -44,10 +44,20 @@ section, footer {
 
 .home-lead .sublead {
   font-size: 20px;
+  text-shadow: 0px 0px 10px #fff, 1px 1px 1px rgba(0,0,0,0.1);
 }
 
 .home-lead .logo {
-  max-width: 376px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.cover-10 .logo {
+  max-height: 100em;
+}
+
+.cover-10 .video-cover {
+  margin-top: 0;
 }
 
 /* How it works */
