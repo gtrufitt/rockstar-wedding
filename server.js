@@ -4,6 +4,7 @@ const contentful = require('contentful');
 const marked = require('marked');
 
 var data = require('./data/page.json');
+var gallery = require('./data/gallery.json');
 
 const SPACE_ID = process.env.SPACE_ID;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
@@ -32,6 +33,8 @@ const client = contentful.createClient({
 
 const getPage = (entries, pageKey) =>
     entries.items.filter(entry => entry.fields.pageKey === pageKey);
+
+const getPageSpecificFields = (page) => page === 'gallery' ? gallery : {};
 
 var app = express();
 
@@ -118,6 +121,8 @@ data.pages.map(page => {
             // Get the page from the response
             const fetchedPaged = getPage(entries, page);
             const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
+            console.log(page)
+            const pageSpecificFields = getPageSpecificFields(page);
 
             // Render the page using the fields from the API response
             res.render(
@@ -129,7 +134,8 @@ data.pages.map(page => {
                         ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
                         description: 'Wedding videos with personality'
                     },
-                    pageFields
+                    pageFields,
+                    pageSpecificFields
                 )
             );
         });

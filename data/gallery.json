@@ -1,0 +1,25 @@
+{
+  "gallery": [
+    {
+      "mainName": "The Mitches",
+      "subName": "Anthony and Kayleigh",
+      "image": "wedding-mitch",
+      "vimeoId": "192507651",
+      "package": "Unplugged"
+    },
+    {
+      "mainName": "The Truffs",
+      "subName": "Hayley and Gareth",
+      "image": "gallery-truffs",
+      "vimeoId": "167140374",
+      "package": "Vinyl"
+    },
+    {
+      "mainName": "The Cro-barts",
+      "subName": "Stevi and Alex",
+      "image": "gallery-crobarts",
+      "vimeoId": "207182645",
+      "package": "Cassette"
+    }
+  ]
+}
