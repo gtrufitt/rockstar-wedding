@@ -77,6 +77,14 @@ section, footer {
   padding-right: 20px;
 }
 
+/* Gallery */
+
+.portfolio-item__title h5 {
+    margin-bottom: 0;
+    margin-top: 5px;
+    line-height: 1.4em;
+}
+
 /* Header */
 
 .header-lead .lead {
