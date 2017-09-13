@@ -62,7 +62,7 @@ app.get('/blog', (req, res) => {
     client
         .getEntries({
             content_type: 'blogPost',
-            order: '-sys.publishedAt'
+            order: '-sys.createdAt'
         })
         .then(blogPosts => {
             res.render('blog', {
