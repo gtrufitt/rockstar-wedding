@@ -1,6 +1,13 @@
 {
   "gallery": [
     {
+      "mainName": "The Morris-Patersons",
+      "subName": "Tess and Morag",
+      "image": "gallery-morris-patersons",
+      "vimeoId": "233660853",
+      "package": "Cassette"
+    },
+    {
       "mainName": "The Mitches",
       "subName": "Anthony and Kayleigh",
       "image": "wedding-mitch",
