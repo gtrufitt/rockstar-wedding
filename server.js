@@ -62,7 +62,7 @@ app.get('/blog', (req, res) => {
     client
         .getEntries({
             content_type: 'blogPost',
-            order: '-sys.publishedAt'
+            order: '-sys.updatedAt'
         })
         .then(blogPosts => {
             res.render('blog', {
@@ -71,7 +71,7 @@ app.get('/blog', (req, res) => {
                 ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
                 description: 'Read blog posts from Rockstar Wedding'
             });
-        });
+        }).catch((err) => console.log(err));
 });
 
 app.get('/blog/:slug', (req, res) => {
