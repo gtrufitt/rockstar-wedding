@@ -84,17 +84,30 @@ section, footer {
 
 .portfolio-item__title h5 {
   background-color: rgba(0,34,26,0.5);
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: normal;
   padding: 5px 0;
 }
 
+
 .portfolio-item__logo {
   position: absolute;
-  bottom: -15px;
+  bottom: 0;
   left: 5px;
   display: block;
-  width: 24%;
+  width: 16%;
   z-index: 5;
+}
+
+@media all and (min-width: 480px) {
+  .portfolio-item__logo {
+    width: 23.5%;
+  }
+}
+
+.portfolio-item.reveal-video .portfolio-item__logo {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Header */
