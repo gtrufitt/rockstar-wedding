@@ -121,7 +121,6 @@ data.pages.map(page => {
             // Get the page from the response
             const fetchedPaged = getPage(entries, page);
             const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
-            console.log(page)
             const pageSpecificFields = getPageSpecificFields(page);
 
             // Render the page using the fields from the API response
