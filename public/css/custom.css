@@ -30,21 +30,20 @@ section, footer {
 
 /* Home */
 
-
-.home-lead  .lead {
-    text-transform: uppercase;
-  }
-
 .home-lead .lead,
-.home-lead.sublead {
-  margin-bottom: 0;
+.home-lead .sublead {
   margin-top: 10px;
-  color: #000;
+  color: #00261C;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.6), 2px 2px 0 rgba(255,255,255,0.4), 3px 3px 0 rgba(255,255,255,0.2);
+}
+
+.home-lead .lead {
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .home-lead .sublead {
   font-size: 20px;
-  text-shadow: 0px 0px 10px #fff, 1px 1px 1px rgba(0,0,0,0.1);
 }
 
 .home-lead .logo {
