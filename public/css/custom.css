@@ -98,8 +98,23 @@ section, footer {
   padding: 15px 25px;
 }
 
-.location__image {
+.homepage-loc__desc {
+  float:right;
+  padding-left: 1em;
+  width: 80%;
+}
+
+@media all and (min-width: 1024px) {
+  .homepage-loc__desc {
+    padding-top: 2em;
+    padding-left: 0;
+  }
+}
+
+.homepage-loc__img {
+  float: left;
   max-width: 220px;
+  width: 20%;
 }
 
 /* How it works */
