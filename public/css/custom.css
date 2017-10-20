@@ -47,7 +47,7 @@ section, footer {
 /* Home */
 
 .main-container--homepage {
-  background: url("/img/confetti.png");
+  background: url("/img/homepage-confetti.jpg");
   background-size: cover;
 }
 
