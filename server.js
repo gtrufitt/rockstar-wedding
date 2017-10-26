@@ -2,6 +2,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 const contentful = require('contentful');
 const marked = require('marked');
+const getPageData = require('./app/getPageData');
 
 var data = require('./data/page.json');
 var gallery = require('./data/gallery.json');
@@ -111,33 +112,43 @@ app.get('/blog/:slug', (req, res) => {
 
 // Map the default pages
 data.pages.map(page => {
+
     // Redirect all .html extentions
-    app.get('/' + page + '.html', (req, res) => {
+    app.get(`/${page[0]}.html`, (req, res) => {
         res.redirect(301, '/' + page);
     });
 
-    app.get('/' + page, (req, res) => {
-        client.getEntries().then(entries => {
-            // Get the page from the response
-            const fetchedPaged = getPage(entries, page);
-            const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
-            const pageSpecificFields = getPageSpecificFields(page);
+    app.get('/' + page[0], (req, res) => {
+      Promise.all([
+          client.getEntries(),
+          getPageData({ client: client, contentfulPageId: page[1]})
+        ])
+        .then(values => {
 
-            // Render the page using the fields from the API response
-            res.render(
-                page,
-                Object.assign(
-                    {},
-                    {
-                        title: 'Rockstar Wedding',
-                        ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
-                        description: 'Wedding videos with personality'
-                    },
-                    pageFields,
-                    pageSpecificFields
-                )
-            );
-        });
+          var entries = values[0];
+          var pageDataFields = values[1];
+          // Get the page from the response
+          const fetchedPaged = getPage(entries, page[0]);
+          const pageFields = fetchedPaged[0] && fetchedPaged[0].fields || {};
+          const pageSpecificFields = getPageSpecificFields(page[0]);
+          // Render the page using the fields from the API response
+          res.render(
+              page[0],
+              Object.assign(
+                  {},
+                  {
+                      title: 'Rockstar Wedding',
+                      ogImage: '//rockstar.wedding/img/rockstar-wedding-sharer.png',
+                      description: 'Wedding videos with personality'
+                  },
+                  pageFields,
+                  pageSpecificFields,
+                  pageDataFields
+              )
+          );
+
+        })
+        .catch(err => console.log(err))
     });
 });
 

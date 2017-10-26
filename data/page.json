@@ -1,13 +1,13 @@
 {
   "pages": [
-    "how-it-works",
-    "gallery",
-    "packages-and-pricing",
-    "reviews",
-    "contact-us",
-    "rocknroll",
-    "about-rockstar-wedding",
-    "privacy-policy",
-    "win"
+    ["how-it-works"],
+    ["gallery"],
+    ["packages-and-pricing"],
+    ["reviews"],
+    ["contact-us"],
+    ["rocknroll"],
+    ["about-me", "about"],
+    ["privacy-policy"],
+    ["win"]
   ]
 }

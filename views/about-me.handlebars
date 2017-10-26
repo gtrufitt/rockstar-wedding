@@ -1,0 +1,40 @@
+<div class="main-container">
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12 text-center header-lead">
+              <img alt="Rockstar Wedding" class="logo" src="/img/dark_logo_transparent_background_small.png">
+              <h1 class="lead">About Me</h1>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features features-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-7">
+                    <h3>{{onPageHeading}}</em></h3>
+                    <p class="lead">{{subtitle}}</p>
+
+                    {{#each aboutPageBits}}
+                      <div class="feature">
+                          {{#if this.fields.sectionImage.fields.file}}
+                            <img src="{{this.fields.sectionImage.fields.file.url}}" alt="">
+                          {{/if}}
+                          {{{this.fields.aboutSection}}}
+                      </div>
+                    {{/each}}
+                </div>
+                <div class="col-md-7 features__avatar">
+                    {{#each sideImage}}
+                      <img alt="avatar" src="{{this.fields.file.url}}">
+                      <br>
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</div>
