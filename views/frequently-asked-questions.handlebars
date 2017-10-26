@@ -1,0 +1,31 @@
+<div class="main-container">
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12 text-center header-lead">
+              <img alt="Rockstar Wedding" class="logo" src="/img/dark_logo_transparent_background_small.png">
+              <h1 class="lead">Frequently Asked Questions</h1>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features features-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    <div >
+                      {{#each faQuestion}}
+                          <h4 id="{{this.fields.slug}}">{{this.fields.question}}</h4>
+                          <p>{{this.fields.answer}}</p>
+                          <hr>
+                          <br>
+                      {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</div>
