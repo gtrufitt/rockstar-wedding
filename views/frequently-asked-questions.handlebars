@@ -10,18 +10,25 @@
     </div>
   </section>
 
-  <section class="features features-4">
+  <section>
         <div class="container">
             <div class="row">
-                <div class="col-xs-10">
-                    <div >
+              <ul class="question-link-wrapper">
+                {{#each faQuestion}}
+                  <li class="question-item">
+                    <a href="#{{this.fields.slug}}" class="question--link">{{this.fields.question}}</a>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="row">
+                <div class="question-wrapper">
                       {{#each faQuestion}}
-                          <h4 id="{{this.fields.slug}}">{{this.fields.question}}</h4>
-                          <p>{{this.fields.answer}}</p>
-                          <hr>
-                          <br>
+                        <div class="question" id="{{this.fields.slug}}">
+                          <h4 class="question--title">{{this.fields.question}}</h4>
+                          <p>{{{this.fields.answer}}}</p>
+                        </div>
                       {{/each}}
-                    </div>
                 </div>
             </div>
 
