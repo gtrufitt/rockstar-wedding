@@ -276,28 +276,40 @@ iframe {
   margin-bottom: 10px;
 }
 
-@media all and (min-width: 768px) {
+
   .question-item {
     margin-bottom: 15px;
+    position: relative;
+    background: #fff;
   }
-}
+
+  .question-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 3px;
+    left: 0;
+    height: calc(1em + 35px);
+    background-color: #ccc;
+  }
+
 
 .question--link {
   width: 100%;
-  padding: 5px 10px;
+  padding: 15px;
   display: inline-block;
   transition : background-color 200ms ease-out;
 }
 
-@media all and (min-width: 768px) {
-  .question--link {
-    background-color: transparent;
-  }
+
+.question-item:hover,
+.question-item:focus {
+  background-color: rgba(255,255,255,0.7);
 }
 
-.question--link:hover,
-.question--link:focus {
-  background-color: #fff;
+.question-item:hover:before,
+.question-item:focus:before {
+  background-color: #444;
 }
 
 .question-wrapper {
