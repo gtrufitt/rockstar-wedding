@@ -106,8 +106,7 @@ section, footer {
 
 @media all and (min-width: 1024px) {
   .homepage-loc__desc {
-    padding-top: 2em;
-    padding-left: 0;
+    padding-left: 1.5em;
   }
 }
 
@@ -117,6 +116,11 @@ section, footer {
   width: 20%;
 }
 
+@media all and (min-width: 1024px) {
+  .homepage-feature__bottom {
+    min-height: 315px;
+  }
+}
 /* How it works */
 
 .card-8 .card__title h3 {
@@ -317,9 +321,9 @@ iframe {
 }
 
 @media all and (min-width: 768px) {
-  .question-wrapper {
+  /*.question-wrapper {
     column-count: 2;
-  }
+  }*/
 }
 
 .question {
