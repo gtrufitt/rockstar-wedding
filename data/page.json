@@ -8,6 +8,7 @@
     ["rocknroll"],
     ["about-me", "about"],
     ["privacy-policy"],
-    ["win"]
+    ["win"],
+    ["frequently-asked-questions", "faq"]
   ]
 }

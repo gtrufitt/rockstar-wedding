@@ -106,8 +106,7 @@ section, footer {
 
 @media all and (min-width: 1024px) {
   .homepage-loc__desc {
-    padding-top: 2em;
-    padding-left: 0;
+    padding-left: 1.5em;
   }
 }
 
@@ -117,6 +116,11 @@ section, footer {
   width: 20%;
 }
 
+@media all and (min-width: 1024px) {
+  .homepage-feature__bottom {
+    min-height: 315px;
+  }
+}
 /* How it works */
 
 .card-8 .card__title h3 {
@@ -257,4 +261,80 @@ section, footer {
 
 iframe {
   background: none;
+}
+
+/* FAQ Page */
+.question-link-wrapper {
+  column-count: 2;
+  padding: 0 10px
+}
+
+@media all and (min-width: 768px) {
+  .question-link-wrapper {
+    column-count: 3;
+    padding: 0;
+  }
+}
+.question-item {
+  line-height: 1.3em;
+  margin-bottom: 10px;
+}
+
+
+  .question-item {
+    margin-bottom: 15px;
+    position: relative;
+    background: #fff;
+  }
+
+  .question-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 3px;
+    left: 0;
+    height: calc(1em + 35px);
+    background-color: #ccc;
+  }
+
+
+.question--link {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  transition : background-color 200ms ease-out;
+}
+
+
+.question-item:hover,
+.question-item:focus {
+  background-color: rgba(255,255,255,0.7);
+}
+
+.question-item:hover:before,
+.question-item:focus:before {
+  background-color: #444;
+}
+
+.question-wrapper {
+  margin-top: 50px;
+}
+
+@media all and (min-width: 768px) {
+  /*.question-wrapper {
+    column-count: 2;
+  }*/
+}
+
+.question {
+    background: #fff;
+    break-inside: avoid;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-left: 5px solid #ccc;
+}
+
+.question--title {
+  border-bottom: 1px solid #f6f6f6;
 }
