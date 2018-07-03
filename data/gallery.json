@@ -29,6 +29,20 @@
       "package": "Cassette"
     },
     {
+      "mainName": "The Robinsons",
+      "subName": "Carey and David",
+      "image": "gallery-robinsons",
+      "vimeoId": "277274547",
+      "package": "Vinyl"
+    },
+    {
+      "mainName": "The Smiths",
+      "subName": "Donna and Stephen",
+      "image": "gallery-smiths",
+      "vimeoId": "272102483",
+      "package": "Vinyl"
+    },
+    {
       "mainName": "The  O’Rourkes",
       "subName": "Kate and Joe",
       "image": "gallery-orourkes",
