@@ -1,6 +1,13 @@
 {
   "gallery": [
     {
+      "mainName": "David and Allan",
+      "subName": "David and Allan",
+      "image": "gallery-allandavid",
+      "vimeoId": "300157288",
+      "package": "Unplugged"
+    },
+    {
       "mainName": "The Morris-Patersons",
       "subName": "Tess and Morag",
       "image": "gallery-morris-patersons",
