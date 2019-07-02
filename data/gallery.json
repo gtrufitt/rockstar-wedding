@@ -1,6 +1,13 @@
 {
   "gallery": [
     {
+      "mainName": "The Firths",
+      "subName": "Louise and Rachael",
+      "image": "gallery-firths",
+      "vimeoId": "302710392",
+      "package": "Unplugged"
+    },
+    {
       "mainName": "David and Allan",
       "subName": "David and Allan",
       "image": "gallery-allandavid",
