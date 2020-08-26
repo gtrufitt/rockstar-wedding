@@ -10,7 +10,18 @@
       </div>
     </div>
   </section>
-
+  
+  
+<style>
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+</style>
   <section>
       <div class="container">
           <div class="row">
@@ -32,6 +43,8 @@
                       <div class="col-sm-12">
                           <textarea name="message" placeholder="Your Message" rows="8"></textarea>
                       </div>
+                      <input class="sr-only" type="text" name="1and1" placeholder="What is 1 + 1?" />
+
                       <div class="col-sm-12">
                           <button type="submit" class="btn btn--primary vpe">
                               Submit Form
