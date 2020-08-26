@@ -1,3 +1,13 @@
+<style>
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+</style>
 {{#unless hideFooter}}
   <section class="rw-footer">
     <div class="container">
@@ -13,14 +23,13 @@
                         <i class="icon-Email"></i>
                         <input class="validate-required validate-email" type="email" name="email" placeholder="Email Address">
                     </div>
+                    <input class="sr-only" type="text" placeholder="What is 1 + 1?" />
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn--primary vpe">
                             Submit Form
                         </button>
                     </div>
                 </form>
-
-                <p style="padding: 15px;">You can also send us an email: hello@rockstar.wedding</p>
             </div>
         </div>
 
